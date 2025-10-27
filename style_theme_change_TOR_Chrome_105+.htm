@@ -1,0 +1,21 @@
+<html>
+<head>
+ <style>
+	body {
+		--fg: #333; --bg: #eee;
+		color: var(--fg);
+		background: var(--bg);
+	}
+	#content { color: var(--fg); background: var(--bg); }
+	body:has(input[value="gray"]:checked)  { --fg:#000; --bg:#444; }
+	body:has(input[value="night"]:checked) { --fg:#aaa; --bg:#000; }
+ </style>
+</head>
+<body>
+<label><input type="radio" name="theme" value="light" checked> Light</label> <label><input type="radio" name="theme" value="gray"> Gray</label>
+<label><input type="radio" name="theme" value="night"> Night</label>
+
+<h3>Style theme change without JavaScript</h3>
+Works in TOR browser, Chrome v105+
+</body>
+</html>

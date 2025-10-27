@@ -1,0 +1,32 @@
+<html>
+<head>
+ <style>
+	:root{--fg:#333;--bg:#eee}
+	input[type="radio"]{position:absolute;opacity:0;pointer-events:none}
+	#light:checked ~ .wrap{--fg:#333;--bg:#eee}
+	#gray:checked ~ .wrap{--fg:#000;--bg:#999}
+	#night:checked ~ .wrap{--fg:#ddd;--bg:#000}
+	.wrap{color:var(--fg);background:var(--bg);min-height:100vh;padding:20px;font-family:sans-serif;transition:.2s}
+	.toggle label{display:inline-block;padding:8px 12px;margin:0 6px;border:1px solid #777;border-radius:4px;cursor:pointer;background:#ddd;color:#000}
+	#light:checked ~ .wrap label[for="light"],
+	#gray:checked ~ .wrap label[for="gray"],
+	#night:checked ~ .wrap label[for="night"]{background:#555;color:#fff;border-color:#000}
+ </style>
+</head>
+<body>
+ <input type="radio" name="theme" id="light" checked>
+ <input type="radio" name="theme" id="gray">
+ <input type="radio" name="theme" id="night">
+
+ <div class="wrap">
+	<div class="toggle">
+	 <label for="light">Light</label>
+	 <label for="gray">Gray</label>
+	 <label for="night">Night</label>
+	</div>
+
+	<h3>Style theme change without JavaScript</h3>
+	Works in most browsers, TOR browser. Chrome 49+ (oct 2016)
+ </div>
+</body>
+</html>
